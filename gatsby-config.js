@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/reponame",
+  pathPrefix: "/Simple-football-blog-using-Gatsby.js-and-GraphCMS",
 
   siteMetadata: {
     title: `Gatsby Default Starter`,
