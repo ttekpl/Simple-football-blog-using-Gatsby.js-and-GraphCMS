@@ -1,0 +1,135 @@
+:root {
+  --menuSize: 50px;
+}
+
+.menu {
+  height: var(--menuSize);
+  background-color: #663399;
+  position: absolute;
+  margin-top: var(--menuSize);
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  line-height: var(--menuSize);
+  display: block;
+  letter-spacing: 2px;
+  font-size: calc(var(--menuSize) / 2);
+  margin: 0 40px;
+  transition: 0.2s;
+  padding: 0 20px;
+}
+
+.link:hover {
+  background-color: #2f124c;
+}
+
+.logo {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #663399;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--menuSize);
+  text-align: center;
+  font-weight: bold;
+  line-height: var(--menuSize);
+  font-size: calc(var(--menuSize) / 1.5);
+  letter-spacing: 1px;
+}
+
+.logo i {
+  height: var(--menuSize);
+  display: inline-block;
+  color: #663399;
+  line-height: var(--menuSize);
+  font-size: calc(var(--menuSize) / 1.5);
+}
+nav + * {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    font-size: 25px;
+    height: 50px;
+    padding: 10px 50px;
+  }
+
+  .menu {
+    height: 100vh;
+    transform: translateX(100%);
+    position: fixed;
+    padding: 0 0 500px 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 4;
+    top: 0;
+    margin: 0;
+    transition: 0.2s;
+  }
+  .menu.show {
+    transform: translateX(0);
+  }
+
+  .link {
+    font-size: 30px;
+    padding: 10px 20px;
+    line-height: 30px;
+  }
+
+  h1.title {
+    padding: 0;
+    font-size: 25px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+  div.icons {
+    width: 100vw;
+    padding: 0 50px;
+  }
+  div.icon {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  div.links {
+    flex-direction: column;
+  }
+
+  .links div.reference {
+    width: 90vw;
+    margin: 50px auto;
+    height: 400px;
+  }
+  div.reference img {
+    min-width: 100%;
+  }
+
+  .links div.reference a {
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
